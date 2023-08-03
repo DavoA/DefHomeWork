@@ -302,23 +302,109 @@
 # print(ordered_str(["cool","green","sos"]))
 
 # 24
-def aeoui(ml):
+# def aeoui(ml):
+#   if type(ml) != list:
+#     print("Should be list")
+#     return None
+#   letters = "aeoui"
+#   word = ""
+#   max = 0
+#   for i in ml:
+#     if type(i) != str:
+#       print("Should be str")
+#       return None
+#     cnt=0
+#     for j in letters:
+#       if j in i:
+#         cnt+=1
+#     if cnt > max:
+#       max=cnt
+#       word = i
+#   return word
+# print(aeoui(["sos","hello","no"]))
+
+# 25
+# def sentences(ml):
+#   if type(ml) != list:
+#     print("Should be list")
+#     return None
+#   max = 0
+#   sentence = ""
+#   for i in ml:
+#     if type(i) != str:
+#       print("Should be string")
+#       return None
+#     cnt = len(i.split())
+#     if cnt > max:
+#       sentence = i
+#   return sentence
+# print(sentences(["You are so cool","hello world","bye","Realy nice to meet you"]))
+
+# 26 -- ?
+
+# 27
+# def age(ml):
+#   if type(ml) != list:
+#     print("Should be string")
+#     return None
+#   md = {}
+#   max = 0
+#   for i in ml:
+#     if type(i) != dict:
+#       print("Should be dictionary")
+#       return None
+#     if i["age"] > max:
+#       max = i["age"]
+#       md = i
+#   return i
+# arr = [{"name" : "Davit",
+#        "age": 18,
+#        },{"name" : "Frunze",
+#        "age": 21,
+#        },{"name" : "Mesrop",
+#        "age": 58,
+#        }]
+# print(age(arr))
+
+# 28
+# def point(ml):
+#   if type(ml) != list:
+#     print("Should be string")
+#     return None
+#   for i in ml:
+#     if type(i) != dict:
+#       print("Should be dictionary")
+#       return None
+#   tmp = ml
+#   n = len(tmp)
+#   for i in range(n):
+#     for j in range(n-1-i):
+#       if tmp[j]["points"] > tmp[j+1]["points"]:
+#         tmp[j], tmp[j+1] = tmp[j+1], tmp[j]
+#   return tmp
+# arr = [{"name" : "Davit",
+#        "points": 20,
+#        },{"name" : "Frunze",
+#        "points": 8,
+#        },{"name" : "Mesrop",
+#        "points": 13,
+#        }]
+# print(point(arr))
+
+# 29
+def name(ml):
   if type(ml) != list:
-    print("Should be list")
+    print("Should be string")
     return None
-  letters = "aeoui"
-  word = ""
   max = 0
+  name = 0
   for i in ml:
-    if type(i) != str:
-      print("Should be str")
+    if type(i) != dict:
+      print("Should be dictionary")
       return None
-    cnt=0
-    for j in letters:
-      if j in i:
-        cnt+=1
-    if cnt > max:
-      max=cnt
-      word = i
-  return word
-print(aeoui(["sos","hello","no"]))
+    if len(i["name"])>max:
+      max = len(i["name"])
+      name = i["name"]
+  return name
+arr = [{"name" : "Politexnik"},{"name" : "Mankavarjakan"},{"name" : "Tntesagitakan"}]
+print(name(arr))
