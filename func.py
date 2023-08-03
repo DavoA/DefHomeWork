@@ -138,22 +138,93 @@
 # print(mostused("Hello World"))
 
 # 12
-def longword_mostused(mstr):
-  if type(mstr) != str:
-    print("Should be string")
+# def longword_mostused(mstr):
+#   if type(mstr) != str:
+#     print("Should be string")
+#     return None
+#   arr=mstr.split()
+#   l = 0
+#   word = ""
+#   for i in arr:
+#     if len(i)>l:
+#       l=len(i)
+#       word = i
+#   max = 0
+#   letter = ""
+#   for i in word:
+#     if mstr.count(i)>max:
+#       max=mstr.count(i)
+#       letter = i
+#   return letter
+# print(longword_mostused("Hello my colorful world"))
+
+# 13
+# def numindex(mstr,num):
+#   if type(mstr) != str or type(num) != int:
+#     print("Should be string")
+#     return None
+#   return mstr[num],mstr[-num]
+# print(numindex("Hello",1))
+
+# 14
+# def polindrom(num):
+#   if type(num) != int:
+#     print("Should be integer")
+#     return None
+#   tmp = str(num)
+#   half = len(tmp1)//2
+#   if tmp1 == tmp1[::-1]
+#     return True
+#   return False
+# print(polindrom(121))
+
+# 15
+# def nearpol(num):
+#   low = num-1
+#   high = num+1
+#   while str(low) != str(low)[::-1]:
+#     low-=1
+#   while str(high) != str(high)[::-1]:
+#     high+=1
+#   if num - low < high - num:
+#     return low
+#   else:
+#     return high
+# print(nearpol(144))
+
+# 16
+# def multiplenum(num):
+#   if type(num) != int:
+#     print("Should be integer")
+#     return None
+#   if num<10:
+#     return num
+#   tmp = str(num)
+#   num1 = int(tmp[0])
+#   num2 = int(tmp[len(tmp)-1])
+#   return num1*num2
+# print(multiplenum(244))
+
+# 17
+# def cntstr(ml):
+#   if type(ml) != list:
+#     print("Should be list")
+#     return None
+#   cnt = 0
+#   for i in ml:
+#     if type(i) == str:
+#       cnt+=1
+#   return cnt
+# print(cntstr(["hello",90,9.8,"world"]))
+
+# 18
+def mmax(ml):
+  if type(ml) != list:
+    print("Should be list")
     return None
-  arr=mstr.split()
-  l = 0
-  word = ""
-  for i in arr:
-    if len(i)>l:
-      l=len(i)
-      word = i
-  max = 0
-  letter = ""
-  for i in word:
-    if mstr.count(i)>max:
-      max=mstr.count(i)
-      letter = i
-  return letter
-print(longword_mostused("Hello my colorful world"))
+  arr = []
+  for i in ml:
+    if type(i) == int:
+      arr.append(i)
+  return max(arr)
+print(mmax([90,18,"goog",False]))
