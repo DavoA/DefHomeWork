@@ -218,13 +218,107 @@
 # print(cntstr(["hello",90,9.8,"world"]))
 
 # 18
-def mmax(ml):
+# def mmax(ml):
+#   if type(ml) != list:
+#     print("Should be list")
+#     return None
+#   arr = []
+#   for i in ml:
+#     if type(i) == int:
+#       arr.append(i)
+#   return max(arr)
+# print(mmax([90,18,"goog",False]))
+
+# 19
+# def evennum(ml):
+#   if type(ml) != list:
+#     print("Should be list")
+#     return None
+#   arr = []
+#   for i in ml:
+#     if type(i) == int:
+#       if (i>=10 and i<=99) and i%2==0:
+#         arr.append(i)
+#   return arr
+# print(*evennum([97,88,44,134,"sun",False]))
+
+# 20
+# def mlaverage(ml):
+#   if type(ml) != list:
+#     print("Should be list")
+#     return None
+#   arr = []
+#   for i in ml:
+#     if type(i) == int:
+#       arr.append(i)
+#   S = 0
+#   for i in arr:
+#     S+=i
+#   P = S/len(arr)
+#   return P
+# print(mlaverage([78,90,18,"goog",False]))
+
+# 21
+# def lenlist(ml):
+#   if type(ml) != list:
+#     print("Should be list")
+#     return None
+#   arr = []
+#   for i in ml:
+#     if type(i) != str:
+#       print("Should be str")
+#       return None
+#     arr.append(len(i))
+#   return arr
+# print(lenlist(["sos","hello","no"]))
+
+# 22
+# def ordered(ml):
+#   if type(ml) != list:
+#     print("Should be list")
+#     return None
+#   arr = []
+#   for i in ml:
+#     if type(i) == int:
+#       arr.append(i)
+#   return sorted(arr)
+# print(ordered([90,"hello", True, 56, 11, 89]))
+
+# 23
+# def ordered_str(ml):
+#   if type(ml) != list:
+#     print("Should be list")
+#     return None
+#   arr = []
+#   for i in ml:
+#     if type(i) == str:
+#       arr.append(i)
+#   n = len(arr)
+#   for i in range(n):
+#     for j in range(n-1-i):
+#       if len(arr[j]) > len(arr[j+1]):
+#         arr[j], arr[j+1] = arr[j+1], arr[j]
+#   return arr
+# print(ordered_str(["cool","green","sos"]))
+
+# 24
+def aeoui(ml):
   if type(ml) != list:
     print("Should be list")
     return None
-  arr = []
+  letters = "aeoui"
+  word = ""
+  max = 0
   for i in ml:
-    if type(i) == int:
-      arr.append(i)
-  return max(arr)
-print(mmax([90,18,"goog",False]))
+    if type(i) != str:
+      print("Should be str")
+      return None
+    cnt=0
+    for j in letters:
+      if j in i:
+        cnt+=1
+    if cnt > max:
+      max=cnt
+      word = i
+  return word
+print(aeoui(["sos","hello","no"]))
